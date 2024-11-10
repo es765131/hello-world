@@ -81,6 +81,19 @@ void program2()
 
     printf("%f divided by %f is:\n", num1,num2);
     printf("%f ", (num1 / num2));
-
+    
+    if (num1 > num2)
+    {
+        printf("\nThis fraction is top-heavy!\n");
+    }
+    else if (num2 > num1)
+    {
+        printf("\nThis fraction is bottom-heavy!\n");
+    }
+    else
+    {
+        printf("\nThis fraction is equal!\n");
+    }
+    
     return;
 }
