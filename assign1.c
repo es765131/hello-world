@@ -1,5 +1,6 @@
 #include <stdio.h>
 void program1();
+void program2();
 void main();
 
 
@@ -7,31 +8,24 @@ void main()
 {
     char select[50];
 
-    printf("\nChoose a program (Type 1-4)...\n");
-    scanf("%s",&select);
-
+    printf("\nChoose a program (Type 1-2)...\n");
+    scanf("%s",&select); // Wait for user input, then set it aside in the select char array.
     switch (select[0])
     {
-    case '1':
-        program1();
+    case '1': // If the first char is 1, then true.
+        program1(); // Execute program 1.
         break;
 
     case '2':
-        printf("\nNot yet implemented\n");
-        break;
-
-    case '3':
-        printf("\nNot yet implemented\n");
-        break;
-
-    case '4':
-        printf("\nNot yet implemented\n");
+        program2();
         break;
 
     default:
         printf("\nUnknown command.\n");
         main();
+        break;
     }
+    return;
 
 }
 
@@ -70,6 +64,23 @@ void program1()
         i++;
         j = 1;
     }
+    return;
     
     
+}
+
+void program2()
+{
+    float num1;
+    float num2;
+
+    printf("\nDivision program.\nEnter a number... (For example, type 20.055)\n");
+    scanf("%f", &num1);
+    printf("\nEnter another number... (For example, type 1.5)\n");
+    scanf("%f", &num2);
+
+    printf("%f divided by %f is:\n", num1,num2);
+    printf("%f ", (num1 / num2));
+
+    return;
 }
